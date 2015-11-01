@@ -1,0 +1,53 @@
+
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <link rel="stylesheet" type="text/css" href="css/appstyle.css">   
+        <script src="/socket.io/socket.io.js">
+        </script>
+        <script type="text/javascript" src="jslibs/raphael.js"></script>
+        <script type="text/javascript" data-main="appscripts/main.js" src="jslibs/require.js">
+        </script>
+        <title>All together</title>
+    </head>
+
+  <body>
+    <header> All together now! </header>
+    <div id='main'>
+
+         <div id="svgcanvasDiv"> 
+            <div id="svgcanvas"> </div>  <!--  <article>   article  </article> -->
+        </div>
+
+        <nav>
+            <div>
+                Chat box:<br>  
+                <textarea id="chatBox" rows="16" cols="16"> </textarea>
+            </div>
+
+            <div>
+                Type:<br>
+                <textarea id="outgoingChatMessage" rows="2" cols="16"> </textarea>
+            </div>
+        </nav>
+
+        <aside>Controls
+                <!--create hsl sliders and set their default values to the middle values-->
+            <br>
+            <br>H: <input id="hSlider" type="range" step=".05" min="0" max="1" value=".5">
+            <br>S: <input id="sSlider" type="range" step=".05" min="0" max="1" value=".5">
+            <br>L: <input id="lSlider" type="range" step=".05" min="0" max="1" value=".5">
+                <!--and one for stroke-->
+            <br>Stroke: <input id="strokeSlider" type="range" step="1" min="0" max="10" value="2">
+
+            <br><input id="clearButton" type="button" value="Clear">
+        </aside>
+
+    </div>
+    <footer>Credits:
+        <p> I did this! </p>
+    </footer>
+  </body>
+</html>
+
